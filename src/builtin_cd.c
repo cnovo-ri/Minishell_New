@@ -58,12 +58,12 @@ int			builtin_cd(t_env **env, char **args)
 			print_pwd = true;
 			curpath = _getenv(*env, "OLDPWD=", 7);
 		}
-		else if (!args[1])
+		else if (!(args[1]))
 			curpath = _getenv(*env, "HOME=", 5);
 		else
 			curpath = args[1];
 		builtin_setenv(env, "OLDPWD=", _getenv(*env, "PWD=", 4));
-		builtin_setenv(env, "PWD=", args[1]);
+		builtin_setenv(env, "PWD=", curpath);
 		if (print_pwd)
 			ft_putendl(_getenv(*env, "PWD=", 4));
 		return (chdir(curpath));

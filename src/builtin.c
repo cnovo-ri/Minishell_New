@@ -73,7 +73,9 @@ void		builtin_setenv(t_env **env, char *name, char *content)
 		return ;
 	}
 	len = ft_strlen(name);
-	if (content)
+	if (ft_strncmp(name, "OLDPWD=", 7) == 0 || ft_strncmp(name, "PWD=", 4) == 0)
+		tmp = ft_strjoin(name, content);
+	else if (content)
 	{
 		tmp2 = ft_strjoin(name, "=");
 		tmp = ft_strjoin(tmp2, content);

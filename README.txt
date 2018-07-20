@@ -8,4 +8,8 @@
 
 -> fonction builtin_cd : amélioré √
 
--> affichage d'un "=" en trop dans le pwd et mauvais affichage du path dans certain cas (cd) : non résolu X
+-> affichage d'un "=" en trop dans le pwd et mauvais affichage du path dans certain cas (cd) : résolu √
+
+-> crash du cd sans argument : résolu √
+
+-> Indication du path absolu dans l'env pour PWD et OLDPWD : à faire X
